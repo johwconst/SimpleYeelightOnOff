@@ -7,15 +7,10 @@ class createDB:
         self.createTable()
 
     def createTable(self):
-        try:
-            self.cur.execute('''CREATE TABLE IF NOT EXISTS simpleDB (
-                nome TEXT,
-                ip TEXT,
-                location TEXT)''')
-        except Exception as e:
-            print('FAIL!' % e)
-        else:
-            print('DONE !')
+        self.cur.execute('''CREATE TABLE IF NOT EXISTS simpleDB (
+            nome TEXT,
+            ip TEXT,
+            location TEXT)''')
 
     def addLamp(self, name, ip, location):
         try:
