@@ -10,13 +10,9 @@ class mainWindow(tk.Frame):
 
     def __init__(self, master=None):
         super().__init__(master)
-        windowWidth = root.winfo_reqwidth()
-        windowHeight = root.winfo_reqheight()
-        positionRight = int(root.winfo_screenwidth() / 2 - windowWidth / 2)
-        positionDown = int(root.winfo_screenheight() / 2 - windowHeight / 2)
 
         master.title('Simple Yeelight On/Off - CRUD')
-        master.geometry("+{}+{}".format(positionRight, positionDown))
+        master.geometry("+{}+{}".format(200, 200))
 
         # instance database
         self.db = database.createDB()
