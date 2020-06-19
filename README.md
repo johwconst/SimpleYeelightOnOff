@@ -1,13 +1,13 @@
-[TextoDaFotoBot](https://t.me/TextoDaFotoBot) 
+### SimpleYeelightOnOff
 
 [![GitHub Follow](https://img.shields.io/github/followers/johwconst?style=social)](https://github.com/johwconst/)
 
-![TextoDaFotoBot](https://github.com/johwconst/TextoDaFotoBot/blob/master/TextoDaFotoBot.png)
+![TextoDaFotoBot](https://i.imgur.com/kis8Cb8.png)
 
-* [Sobre](#sobre)
-* [Configurando](#configurando)
-* [Executando](#executando)
-* [Contato](#contato)
+* [About](#sobre)
+* [Setup](#configurando)
+* [Run](#executando)
+* [Contact](#contato)
 
 ## About
 
