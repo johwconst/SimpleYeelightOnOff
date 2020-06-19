@@ -55,7 +55,7 @@ class mainWindow(tk.Frame):
         # Add Button
         button_add = tk.Button(frame1, text='Add Yeelight', bg='#FF6700', fg='black')
         button_add['font'] = ("Arial", "12", "bold")
-        button_add['command'] = self.addLamp
+        button_add['command'] = self.addBulb
         button_add.grid(row=0, column=4, rowspan=2, padx=10)
 
         # Treeview.
@@ -65,7 +65,7 @@ class mainWindow(tk.Frame):
         self.treeview.heading('#2', text='IP')
         self.treeview.heading('#3', text='Location')
 
-        for row in self.db.getLamp():
+        for row in self.db.getBulb():
             self.treeview.insert('', 'end', text=row[0], values=(row[1], row[2], row[3]))
 
         self.treeview.pack(fill=tk.BOTH, expand=True)
@@ -73,7 +73,7 @@ class mainWindow(tk.Frame):
         # Delete Button
         button_delete = tk.Button(frame3, text='Delete', bg='#E71818', fg='white')
         button_delete['font'] = ("Arial", "12", "bold")
-        button_delete['command'] = self.deleteLamp
+        button_delete['command'] = self.deleteBulb
         button_delete.pack(side='left', padx=10, pady=10)
 
         # Turn On Button
@@ -92,10 +92,9 @@ class mainWindow(tk.Frame):
         if not self.treeview.focus():
             messagebox.showwarning('Ops..', 'No item selected')
         else:
-            select_lamp = self.treeview.focus()
-            res = self.treeview.item(select_lamp)
+            select_bulb = self.treeview.focus()
+            res = self.treeview.item(select_bulb)
             ip = res['values'][1]
-            print(ip)
             bulb = Bulb(ip)
             bulb.turn_on()
 
@@ -103,28 +102,28 @@ class mainWindow(tk.Frame):
         if not self.treeview.focus():
             messagebox.showwarning('Ops..', 'No item selected')
         else:
-            select_lamp = self.treeview.focus()
-            res = self.treeview.item(select_lamp)
+            select_bulb = self.treeview.focus()
+            res = self.treeview.item(select_bulb)
             ip = res['values'][1]
             bulb = Bulb(ip)
             bulb.turn_off()
 
-    def addLamp(self):
+    def addBulb(self):
         name = self.req_name.get()
         ip = self.req_ip.get()
         location = self.req_location.get()
 
-        self.db.addLamp(name=name, ip=ip, location=location)
-        id = self.db.getLastLamp()[0]
+        self.db.addBulb(name=name, ip=ip, location=location)
+        id = self.db.getLastBulb()[0]
         self.treeview.insert('', 'end', text=id, values=(name, ip, location))
 
-    def deleteLamp(self):
+    def deleteBulb(self):
         if not self.treeview.focus():
             messagebox.showwarning('Ops..', 'No item selected')
         else:
             selected = self.treeview.focus()
             id = self.treeview.item(selected)
-            self.db.deleteLamp(id['text'])
+            self.db.deleteBulb(id['text'])
             self.treeview.delete(selected)
 
 root = tk.Tk()

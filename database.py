@@ -12,7 +12,7 @@ class createDB:
             ip TEXT,
             location TEXT)''')
 
-    def addLamp(self, name, ip, location):
+    def addBulb(self, name, ip, location):
         try:
             self.cur.execute(
                 '''INSERT INTO simpleDB VALUES (?, ?, ?)''', (name, ip, location,))
@@ -21,13 +21,13 @@ class createDB:
         else:
             self.con.commit()
 
-    def getLastLamp(self):
+    def getLastBulb(self):
         return self.cur.execute('SELECT MAX(rowid) FROM simpleDB').fetchone()
 
-    def getLamp(self):
+    def getBulb(self):
         return self.cur.execute('SELECT rowid, * FROM simpleDB').fetchall()
 
-    def deleteLamp(self, rowid):
+    def deleteBulb(self, rowid):
         try:
             self.cur.execute("DELETE FROM simpleDB WHERE rowid=?", (rowid,))
         except Exception as e:
