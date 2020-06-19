@@ -2,7 +2,7 @@
 
 [![GitHub Follow](https://img.shields.io/github/followers/johwconst?style=social)](https://github.com/johwconst/)
 
-![TextoDaFotoBot](https://i.imgur.com/kis8Cb8.png)
+![TextoDaFotoBot](https://i.imgur.com/105W0L7.png)
 
 * [About](#sobre)
 * [Setup](#configurando)
