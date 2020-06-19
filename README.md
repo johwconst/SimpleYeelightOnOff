@@ -1,4 +1,4 @@
-### SimpleYeelightOnOff
+### SimpleYeelightOnOff 💡
 
 [![GitHub Follow](https://img.shields.io/github/followers/johwconst?style=social)](https://github.com/johwconst/)
 
