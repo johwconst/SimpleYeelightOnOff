@@ -1,0 +1,5 @@
+enum-compat==0.0.3
+future==0.18.2
+pypiwin32==223
+pywin32==228
+yeelight==0.5.3
