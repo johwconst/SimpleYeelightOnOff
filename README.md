@@ -11,7 +11,7 @@
 
 ## About
 
-This is a very simple CRUD to turn on / off the Xiaomi Yeelight lamp 💡 in Windows, implementation of the [Yeelight Python](https://gitlab.com/stavros/python-yeelight) with an interface using [Tkinter](https://docs.python.org/3/library/tk.html)
+This is a very simple CRUD to turn on / off the Xiaomi Yeelight lamp 💡, implementation of the [Yeelight Python](https://gitlab.com/stavros/python-yeelight) with an interface using [Tkinter](https://docs.python.org/3/library/tk.html)
 
 
 ## Setup
